@@ -95,8 +95,20 @@ function gameFailed() {
 
 }
 
-function levelUpdate() {
+/**
+ * The level update function prepares the game for the next level by updating the level marker in the DOM
+ * and starts the runGame function.
+ */
+ function levelUpdate() {
 
+    let level = parseInt(document.getElementById("level").innerText);
+    let newLevel = ++level;
+
+    document.getElementById("level").innerText = newLevel;
+    
+    document.getElementById("slot-three").focus();
+
+    runGame();
 }
 
 /**
