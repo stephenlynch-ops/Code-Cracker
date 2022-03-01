@@ -182,6 +182,23 @@ function resetGame() {
     }
 }
 
-function updateGameHistory() {
+/**
+ * The update game history function takes the users name and the level they reached and
+ * logs it to the table in the DOM. This gives the user something to try and improve on.
+ */
+ function updateGameHistory() {
 
+    let playerName = document.getElementById("player-name").innerText;
+    let levelCompleted = parseInt(document.getElementById("level").innerText);
+
+    // console.log("Players Name:", playerName);
+    // console.log("Level Reached:", levelCompleted);
+
+    var table = document.getElementById("game-history");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = playerName;
+    cell2.innerHTML = levelCompleted;
+    
 }
