@@ -41,8 +41,19 @@
     runGame();
 });
 
-function runGame() {
+/**
+ * The runGame function generates the number pattern based on the level and populates the numbers
+ * in the DOM.
+ */
+ function runGame() {
 
+    // Get the level number to calculate the required clues   
+    let level = parseInt(document.getElementById("level").innerText);
+    let levelNum = ++level;
+
+    document.getElementById("slot-one").innerText = level;
+    document.getElementById("slot-two").innerText = level + levelNum;
+    
 }
 
 function collectUsersAnswers() {
