@@ -21,8 +21,28 @@
                 For example if the first two numbers are 2 and 4 (+2) then the third number will be 6 (4 + 2 = 6) and so on.<br>Good Luck!</p>      
         </div>
     </section>
+<!-- Game Board Section -->
+    <section id="game-board-section">
+        <div id="game-board">
+            <div id="players-detail">Now Playing:
+                <span id="player-name">Player</span>
+            </div>
+            <h2 class="board-headline">Level: <span id="level">1</span></h2>
+            <div id="number-input-section">
+                <div id="slot-one" class="number-input">X</div>
+                <div id="slot-two" class="number-input">X</div>
+                <input id="slot-three" class="number-input" type="number" placeholder="3rd No.">
+                <input id="slot-four" class="number-input" type="number" placeholder="4th No.">
+                <input id="slot-five" class="number-input" type="number" placeholder="5th No.">
+            </div>
 
-    <section>Game Board</section>
+            <div id="check-answer-wrapper">
+                <button data-type="submit" id="submit-answer">Submit Answer</button>
+            </div>
+            <h3 class="reset-headline">Click to reset game back to level 1</h3>
+            <button data-type="reset" id="reset-button">Reset Game</button>
+        </div>
+    </section>
     
     <section>Game History</section>
 
