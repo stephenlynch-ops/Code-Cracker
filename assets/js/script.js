@@ -91,8 +91,21 @@
         }    
 }
 
-function gameFailed() {
+/**
+ * This is the general reset function that is called when the player fails a level
+ * or if the user clicks the reset game button.
+ */
+ function gameFailed() {
+    clearOldAnswers();
 
+    updateGameHistory();
+
+    getPlayerName();
+
+    document.getElementById("level").innerText = 1;
+    document.getElementById("slot-three").focus();
+
+    runGame();
 }
 
 /**
