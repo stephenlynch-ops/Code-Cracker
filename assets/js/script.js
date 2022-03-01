@@ -56,8 +56,39 @@
     
 }
 
-function collectUsersAnswers() {
+/**
+ * The collectUserAnswers function collects the users inputs and compares them to the expected answers
+ * There are 2 error loops. One has actions if the user enters the incorrect answers. The second handles
+ * what to do if the user leaves one of the answer input boxes empty and clicks submit.
+ */
+ function collectUsersAnswers() {
 
+    // Calculate what the next two numbers should be
+
+    let level = parseInt(document.getElementById("level").innerText);
+    let levelNum = ++level;
+
+    let slotThreeCorrect = level + (levelNum * 2);
+    let slotFourCorrect = slotThreeCorrect + levelNum;
+    let slotFiveCorrect = slotFourCorrect + levelNum;
+
+    // Collect the users answer for comparison
+
+    let slotThreeUserAnswer = parseInt(document.getElementById("slot-three").value);
+    let slotFourUserAnswer = parseInt(document.getElementById("slot-four").value);
+    let slotFiveUserAnswer = parseInt(document.getElementById("slot-five").value);
+
+        if ((document.getElementById("slot-three").value) == "" || (document.getElementById("slot-four").value) == "" || (document.getElementById("slot-five").value) == "" ){
+            alert(`You have not completed all of the missing parts of the code`);
+            throw `User failed to complete the code. Aborting!`;
+        } else if (slotThreeCorrect === slotThreeUserAnswer && slotFourCorrect === slotFourUserAnswer && slotFiveCorrect === slotFiveUserAnswer) {
+            alert(`Thats correct. Well done. Lets move on to level ${levelNum}.`);
+            clearOldAnswers();
+            levelUpdate();
+        } else {
+            alert(`Sorry thats not correct. The correct asnswers were ${slotThreeCorrect} , ${slotFourCorrect} and ${slotFiveCorrect}.`);
+            gameFailed();
+        }    
 }
 
 function gameFailed() {
