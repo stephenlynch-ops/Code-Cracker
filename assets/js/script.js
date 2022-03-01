@@ -150,8 +150,21 @@ function resetGame() {
 
 }
 
-function getPlayerName() {
+/**
+ * The get player name function checks if the same player is still playing and based on the answer
+ * it directs the code to either start a new game or request updated player name information.
+ */
+ function getPlayerName() {
 
+    let currentPlayer = document.getElementById("player-name").innerText;
+
+    if (currentPlayer == "") {
+        getInitialPlayerName();
+    } else {
+        if (confirm(`Is ${currentPlayer} still playing?`) == false) {
+            getInitialPlayerName();
+        }
+    }
 }
 
 /**
