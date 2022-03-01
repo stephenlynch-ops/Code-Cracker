@@ -135,7 +135,18 @@
 
 }
 
+/**
+ * This is the reset function that gives the user the option to reset the game
+ */
 function resetGame() {
+    
+    let warning = "Confirm RESET game request";
+
+    if (confirm(warning) == true) {
+        gameFailed();
+    } else {
+        alert(`Reset request cancelled`);
+    }
 
 }
 
