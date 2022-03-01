@@ -99,7 +99,14 @@ function levelUpdate() {
 
 }
 
-function clearOldAnswers() {
+/**
+ * This clears any old answers from the input boxes prior to a new game / level
+ */
+ function clearOldAnswers() {
+
+    document.getElementById("slot-three").value = "";
+    document.getElementById("slot-four").value = "";
+    document.getElementById("slot-five").value = "";
 
 }
 
