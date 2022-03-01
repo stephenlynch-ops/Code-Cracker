@@ -147,3 +147,27 @@ td {
 .level-completed {
     width: 30%;
 }
+
+/* Footer Styles */
+
+#footer-section{
+    width: 100%;
+    margin-top: 30px;
+}
+
+#learn-more {
+    color: #ffffff;
+    font-style: italic;
+    margin: 2px;
+}
+
+#maths-is-fun { 
+    color: #ffffff;
+    font-size: larger;
+}
+
+#maths-is-fun:hover {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: larger;
+}
