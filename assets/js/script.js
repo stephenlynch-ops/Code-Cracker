@@ -143,8 +143,19 @@ function getPlayerName() {
 
 }
 
-function getInitialPlayerName() {
+/**
+ * The get initial player name function is run when the game loads for the first time.
+ * This is done to get the initial players name before the first game begins.
+ */
+ function getInitialPlayerName() {
 
+    var userName = prompt("Please enter you game name", "Mr.E Player");
+
+    if (userName == "") {
+        document.getElementById("player-name").innerText = "Mr.E Player";
+    } else {
+        document.getElementById("player-name").innerText = userName;
+    }
 }
 
 function updateGameHistory() {
