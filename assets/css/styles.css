@@ -27,3 +27,82 @@ body {
     margin-right: auto;
     font-size: small;
 }
+
+/* Game Board Section Styles */
+
+#game-board {
+    background-color: #472d0a;
+    width: 90%;
+    height: 65%;
+    max-width: 750px;
+    max-height: 530px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.board-headline {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+#number-input-section {
+    width: 100%;
+    height: 30vh;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.number-input {
+    width: 20%;
+    max-width: 150px;
+    height: 30vh;
+    max-height: 100px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #000000;
+    float: left;
+    border: 2px solid #472d0a;
+    line-height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large;
+}
+
+.number-input::placeholder {
+    font-size: small;
+}
+
+input {
+    text-align: center;
+}
+
+.reset-headline {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reset-button {
+    width: 200px;
+    height: 40px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+}
+
+#submit-answer {
+    width: 75%;
+    max-width: 150px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+}
