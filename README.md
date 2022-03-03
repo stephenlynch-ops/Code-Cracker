@@ -1,108 +1,106 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Code Cracker
 
-Welcome Stephen Lynch,
+## Javascript Essentials Project
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+<img src="./assets/images/Responsive-screen-shot.png" alt="Website on different screen sizes" style="height: 400px; width: 750px">
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The website is designed to test the users knowledge of the times tables, while putting it into a 'code cracking' format. The idea behind the code cracking element is to make times tables slightly more fun for the user.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+# INSERT PUBLISHED SITE LINK HERE
 
-A blue button should appear to click: _Make Public_,
+## Table of contents
 
-Another blue button should appear to click: _Open Browser_.
+- [UX](#UX)
+    - [Business goals](#Business-goals)
+    - [User goals](#User-goals)
+    - [Structure of the website](#Structure-of-the-website)
+    - [Website palette](#Website-palette)
+- [Features](#Features)
+- [Technology](#Technology)
+- [Testing](#Testing)
+    - [Functionality testing](#Functionality-testing)
+    - [Compatability testing](#Compatability-testing)
+    - [Code Validation](#Code-validation)
+    - [Issues found during testing](#Issues-found-during-testing)
+    - [Performance testing](#Performance-testing)
+- [Deployment](#Deployment)
+- [Credits](#Credits)
+- [Screenshots](#Screenshots)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# UX
 
-A blue button should appear to click: _Make Public_,
+## Business goals
 
-Another blue button should appear to click: _Open Browser_.
+The Code Cracker site is designed to get the user interested in learning their times tables in a 'game' format. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The user is only required to enter the 3rd, 4th and 5th numbers in the sequence. The 1st and 2nd numbers are the guide to what time table is being requested.
 
-To log into the Heroku toolbelt CLI:
+## User goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Users are challanged by the ever increasing difficulty of the times tables as they increase
+- Users are given a 'level reached' score when they fail a level
+- The 'level reached' score is logged in the game history section
+- The game history section acts as a target for future games
+- As each user is required to enter thier name it can be played by mulitiple players each trying to get further than the other players
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Structure of the website
 
-------
+The website has been designed to be responsive and easy to use / navigate across both static and mobile devices.
 
-## Release History
+Users get feedback when they hover over the clickable links within the site.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Website pallette
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The colors were picked for their contrast to each other, as well as giving a 'game table' feel to the user.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Background color: #213a3a
+- Game playing area color: #472d0a
+- Font color: #ffffff
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+[Return to the table of contents](#table-of-contents)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# Features
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The website is simple single page format. The content of this single page is aligned centrally.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The site has the following features;
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Name input alert
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+This gives the user the opportunity to enter their name, in order to log their score to the game history section. If the user does not enter a name, then the default of 'Mr. E Player' (Mystery Player) will be entered.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+After each failed level the game will ask if the player is still playing, it does this by asking by referencing the users name (see example below);
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+# INSERT IMAGE OF BEING ASKED IF ALEX IS STILL PLAYING HERE
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Instructions
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The instructions give the user the guidance needed to solve the puzzles.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Now playing title
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+This shows the user that they are logged into the current game
 
-------
+### Level number
 
-## FAQ about the uptime script
+This indicates to the player what level they are on. The levels increase after each completed code. The levels start on level 1 and have no upper limit.
 
-**Why have you added this script?**
+### Code boxes
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+There are five code boxes, the first two are populated with the first two numbers in the code. The next three are empty and are where the user is to enter their answers.
 
-**How will this affect me?**
+### Submit button
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+The user has to option to submit their answers by either clicking 'enter' or by clicking the 'submit button'. Should the user click this button (or press enter) without completing each empty code entry, then an alert will be visible warning the user they have missed an answer.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Reset button
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Should the user wish to reset the game back to level 1, they can click this button and the game loop will begin again from the first level.
 
-**So….?**
+### Last game scores
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+This section is a table that is populated as the user completes / or not, levels. Their name and the level they reached is passed to this table and the data is allocated a new tabl row.
 
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+This table is not sorted by design. The user is playing against themselves and so this is only for game history.
