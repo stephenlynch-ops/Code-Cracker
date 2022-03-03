@@ -103,4 +103,6 @@ Should the user wish to reset the game back to level 1, they can click this butt
 
 This section is a table that is populated as the user completes / or not, levels. Their name and the level they reached is passed to this table and the data is allocated a new tabl row.
 
-This table is not sorted by design. The user is playing against themselves and so this is only for game history.
+This table is setup to sort the scores and have them running in descending order.
+
+The table also has a function that trims the rows so only the top 5 scores are shown.
