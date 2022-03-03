@@ -244,8 +244,8 @@ function sortTable() {
 
     let tabRows = document.getElementById("game-history").rows.length;
 
-    if (tabRows === 5) {
-        document.getElementById("game-history").deleteRow(4);
+    if (tabRows === 7) {
+        document.getElementById("game-history").deleteRow(6);
     } 
 
   }
