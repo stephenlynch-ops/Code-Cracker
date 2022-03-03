@@ -77,32 +77,125 @@ After each failed level the game will ask if the player is still playing, it doe
 
 ### Instructions
 
-The instructions give the user the guidance needed to solve the puzzles.
+- Gives instructions to the user to show the logic required to complete the puzzles
 
 ### Now playing title
 
-This shows the user that they are logged into the current game
+- Gives feedback to the user, showing they are logged into the current game
 
 ### Level number
 
-This indicates to the player what level they are on. The levels increase after each completed code. The levels start on level 1 and have no upper limit.
+- Indicates to the player what level they are on 
+- Levels increase after each completed code 
+- The levels start on level 1 and have no upper limit
 
 ### Code boxes
 
-There are five code boxes, the first two are populated with the first two numbers in the code. The next three are empty and are where the user is to enter their answers.
+- Five code boxes
+- First two are populated with the first two numbers in the code as a jumping off point for the user
+- The next three are empty and are where the user is to enter their answers
 
 ### Submit button
 
-The user has to option to submit their answers by either clicking 'enter' or by clicking the 'submit button'. Should the user click this button (or press enter) without completing each empty code entry, then an alert will be visible warning the user they have missed an answer.
+- User has to option to submit their answers by either clicking 'enter' or by clicking the 'submit button' 
+- An alert shows if the user tries to submit an incomplete code
 
 ### Reset button
 
-Should the user wish to reset the game back to level 1, they can click this button and the game loop will begin again from the first level.
+- Allows the user to reset the game back to level 1
+- Current game status (when reset is pressed) is logged as a game
 
 ### Last game scores
 
-This section is a table that is populated as the user completes / or not, levels. Their name and the level they reached is passed to this table and the data is allocated a new tabl row.
+- Table that is populated as the user completes / or not, levels
+- Users name and level reached is passed to this table
+- Table sorts scores and are shown in descending order
+- Table maintains only the top 5 scores
 
-This table is setup to sort the scores and have them running in descending order.
+### External Math site
 
-The table also has a function that trims the rows so only the top 5 scores are shown.
+- External learning resource for users
+- Not affiliated with Code Cracker
+
+### Future implementations
+
+- Remove link to external site
+- Include an interactive time table page, similar to that shown on external site
+
+<img src="./assets/images/mathsisfun.com_table.png" alt="A table of results for the one to twelve times tables" style="height: 400px; width: 750px">
+
+
+[Return to the table of contents](#table-of-contents)
+
+# Technology
+
+### HTML
+
+- The structure language of the site
+
+### CSS
+
+- The style language of the site
+
+### Javascript
+
+- The responsive language of the site to allow interaction for the user
+
+### Font Awesome
+
+- The library for the social media icons used in the footer
+
+### Google fonts
+
+- For the fonts used throughout the site
+
+### Github
+
+- Where the site is hosted
+
+### Gitpod
+
+- Where the site was developed
+
+[Return to the table of contents](#Table-of-contents)
+
+# Testing
+
+## Functionality testing
+
+I developed the site using Chrome developer tools and latterly using Firefox developer tools.
+
+## Compatibility testing
+
+I tested the mobile compatibility for the site using the default options on Chrome which covered everything from Galaxy fold to Nest Hub Max. 
+
+## Code validation
+
+The code has been run through validator.w3.org to check the validity of the HTML with no errors or warnings.
+
+The CSS was tested using jigsaw.w3.org and again no errors were found.
+
+The Javascript was tested using JSHint.com and no errors were found.
+
+## Issues found during testing
+
+When testing I had an issue where the game was stuck on the 3 times table, despite being on level 5 (6 times table). I couldn't determine why this problem only happened after the first round and so ended up rewriting the runGame and levelUpdate functions.
+
+<img src="./assets/images/Stuck_on_threes.png" alt="console feedback showing repeated +3 pattern in the puzzle" style="height: 250px; width: 750px">
+
+There were a couple of bugs when the sorting of the scores was implemented into the table.
+
+Initially the sorting failed. After a check of the code I found the comparison argument was the wrong way around. The example I found on w3schools.com was designed to sort the table in ascending order - I didn't realise this and so the sorting was failing because as I tested the site I kept trying to beat the last score. Hence the better score went to the bottom of the table. This was rectified by using '<' instead of '>'. As below;
+
+<img src="./assets/images/Greater_than_sorting_issue.png" alt="snapshot of code shoing the use of less than in the comparison test" style="height: 130px; width: 550px">
+
+I also had a problem with the table not recording the top 5 scores, it would cut off after 3 scores. Code below;
+
+<img src="./assets/images/Delete_wrong_row.png" alt="snapshot of code showing a cut being made at the wrong row of the score table" style="height: 200px; width: 550px">
+
+This was a simple error to find and resolve as I had forgotten to include the table headers in the row count.
+
+There is one carry over bug that I found by mistake. If the user doesn't enter their name then the default name will be entered on their behalf. However when I moved the window from one screen to another, at the point where the players name is requested, the site didn't enter the default name it just left the players name blank.
+
+## Performance testing
+
