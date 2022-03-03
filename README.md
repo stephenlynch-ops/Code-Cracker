@@ -231,3 +231,22 @@ The site is deployed from GitHub. In order to do this I carried out the followin
 
 [Return to the table of contents](#Table-of-contents)
 
+# Credits
+
+The site was influenced by the Love Maths site that we made as part of the course. I used the general layout as a guide to get a simple, clean layout. 
+
+The idea behind the site was influenced by my son, who is learning his times tables at school and my other son who is a huge fan of Numberblocks - especially when they join together. I wanted to make something that can be used by a wide group of ages to help make learning about the times table more fun.
+
+I referred to w3schools.com and stackoverflow.com for help when i got stuck and repl.it when i needed to see how some code worked.
+
+# Screenshots
+
+## Home page
+
+<img src="./assets/images/deployed-site.png" alt="The finished site" style="height: 450px; width: 750px;"/>
+
+### Top 5 scores
+
+<img src="./assets/images/top-5-scores.png" alt="Top 5 scores" style="height: 150px; width: 350px;"/>
+
+[Return to the table of contents](#table-of-contents)
