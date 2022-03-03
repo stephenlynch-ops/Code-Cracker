@@ -73,7 +73,7 @@ This gives the user the opportunity to enter their name, in order to log their s
 
 After each failed level the game will ask if the player is still playing, it does this by asking by referencing the users name (see example below);
 
-# INSERT IMAGE OF BEING ASKED IF ALEX IS STILL PLAYING HERE
+<img src="./assets/images/Is_alex_still_playing.png" alt="An alert asking if Alex is still playing" style="height: 300px; width: 650px">
 
 ### Instructions
 
@@ -198,4 +198,36 @@ This was a simple error to find and resolve as I had forgotten to include the ta
 There is one carry over bug that I found by mistake. If the user doesn't enter their name then the default name will be entered on their behalf. However when I moved the window from one screen to another, at the point where the players name is requested, the site didn't enter the default name it just left the players name blank.
 
 ## Performance testing
+
+- Site has been evaluated by lighthouse and the score card is below.
+
+<img src="./assets/images/Lighthouse_scores.png" alt="lighthouse score card showing site evaluation" style="height: 190px; width: 475px">
+
+[Return to the table of contents](#table-of-contents)
+
+# Deployment
+
+The site is deployed from GitHub. In order to do this I carried out the following actions;
+
+1. Click settings
+
+<img src="./assets/images/settings.png" alt="Settings button" style="height: 75px; width: 150px;"/>
+
+2. Click pages
+
+<img src="./assets/images/pages.png" alt="Pages button" style="height: 75px; width: 250px;"/>
+
+3. Click the 'none' button and select 'main' from the drop down box
+
+<img src="./assets/images/main.png" alt="main drop down list" style="height: 250px; width: 250px;"/>
+
+4. Click the save button
+
+<img src="./assets/images/save.png" alt="Save button" style="height: 150px; width: 400px;"/>
+
+5. Click the link to the page - after a small wait
+
+<img src="./assets/images/link-to-page.png" alt="Link to the deployed page" style="height: 150px; width: 550px;"/>
+
+[Return to the table of contents](#Table-of-contents)
 
