@@ -43,8 +43,17 @@ body {
     box-sizing: border-box;
 }
 
-.board-headline {
-    width: 90%;
+.game-headline {
+    width: 45%;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.level-headline {
+    width: 40%;
+    float: right;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;

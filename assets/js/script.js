@@ -35,6 +35,7 @@
         }
     });
 
+    updateGameNumber();
     document.getElementById("level").innerText = 1;
     document.getElementById("slot-three").focus();
 
@@ -86,7 +87,7 @@
             clearOldAnswers();
             levelUpdate();
         } else {
-            alert(`Sorry thats not correct. The correct asnswers were ${slotThreeCorrect} , ${slotFourCorrect} and ${slotFiveCorrect}.`);
+            alert(`Sorry thats not correct. The correct answers were ${slotThreeCorrect} , ${slotFourCorrect} and ${slotFiveCorrect}.`);
             gameFailed();
         }    
 }
@@ -106,6 +107,7 @@
 
     getPlayerName();
 
+    updateGameNumber();
     document.getElementById("level").innerText = 1;
     document.getElementById("slot-three").focus();
 
@@ -192,19 +194,27 @@ function resetGame() {
  */
  function updateGameHistory() {
 
+    // Get player naem and score information
     let playerName = document.getElementById("player-name").innerText;
     let levelCompleted = parseInt(document.getElementById("level").innerText);
 
-    // console.log("Players Name:", playerName);
-    // console.log("Level Reached:", levelCompleted);
+    // Evaluate existing game hostory records
+    let rowCount = (document.getElementById("game-history").rows.length);
+    let rowCountAdj = (rowCount -1);
+    let lastRow = document.getElementById("game-history").rows[rowCountAdj].cells;
+    let lowestScore = (Number(lastRow[1].innerHTML));
 
-    var table = document.getElementById("game-history");
-    var row = table.insertRow(1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    cell1.innerHTML = playerName;
-    cell2.innerHTML = levelCompleted;
-    
+    if (levelCompleted >= lowestScore || document.getElementById("game").innerText == 1) {
+        var table = document.getElementById("game-history");
+        var row = table.insertRow(1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        cell1.innerHTML = playerName;
+        cell2.innerHTML = levelCompleted;
+    } else if (document.getElementById("game-history").rows.length = 5 && levelCompleted < lowestScore) {
+        alert(`Sorry thats not good enough to make the top 5 scores. You need to get to at least level ${lowestScore}.`);
+    }
+
 }
 
 /**
@@ -238,9 +248,12 @@ function sortTable() {
         switching = true;
       }
     } 
-  }
+}
 
-  function removeExcessRows() {
+/**
+ * The remove excess rows function simply keeps the number of rows in the game history table down to the top 5.
+ */
+function removeExcessRows() {
 
     let tabRows = document.getElementById("game-history").rows.length;
 
@@ -248,4 +261,16 @@ function sortTable() {
         document.getElementById("game-history").deleteRow(6);
     } 
 
-  }
+}
+
+/**
+ * The update game number function keeps a running count of the number of games played since the site was loaded.
+ */
+function updateGameNumber() {
+
+    let game = parseInt(document.getElementById("game").innerText);
+    let newGame = ++game;
+
+    document.getElementById("game").innerText = newGame;
+
+}
