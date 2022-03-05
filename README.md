@@ -73,7 +73,7 @@ This gives the user the opportunity to enter their name, in order to log their s
 
 After each failed level the game will ask if the player is still playing, it does this by asking by referencing the users name (see example below);
 
-<img src="./assets/images/Is_alex_still_playing.png" alt="An alert asking if Alex is still playing" style="height: 300px; width: 650px">
+<img src="./assets/images/Is_alex_still_playing.png" alt="An alert asking if Alex is still playing" style="height: 250px; width: 650px">
 
 ### Instructions
 
@@ -82,6 +82,10 @@ After each failed level the game will ask if the player is still playing, it doe
 ### Now playing title
 
 - Gives feedback to the user, showing they are logged into the current game
+
+### Game number
+
+- Indicates to the player how many games have been attempted since the website was loaded
 
 ### Level number
 
@@ -195,7 +199,13 @@ I also had a problem with the table not recording the top 5 scores, it would cut
 
 This was a simple error to find and resolve as I had forgotten to include the table headers in the row count.
 
-There is one carry over bug that I found by mistake. If the user doesn't enter their name then the default name will be entered on their behalf. However when I moved the window from one screen to another, at the point where the players name is requested, the site didn't enter the default name it just left the players name blank.
+There was another bug, that was found by mistake. This was the players name was blank if they clicked 'cancel' when prompted to enter their name, or if they opened the site link in a new tab.
+
+<img src="./assets/images/Missing_name.png" alt="snapshot of code showing a cut being made at the wrong row of the score table" style="height: 200px; width: 550px">
+
+This was solved by including a userName == null in the if statement as below;
+
+    Modification: if (username == "" || userName == null)
 
 ## Performance testing
 
