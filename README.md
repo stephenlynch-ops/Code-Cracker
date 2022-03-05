@@ -6,9 +6,7 @@
 
 The website is designed to test the users knowledge of the times tables, while putting it into a 'code cracking' format. The idea behind the code cracking element is to make times tables slightly more fun for the user.
 
-
-
-# INSERT PUBLISHED SITE LINK HERE
+### [View the live website in Github pages](https://stephenlynch-ops.github.io/Code-Cracker/)
 
 ## Table of contents
 
