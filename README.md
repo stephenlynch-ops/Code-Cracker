@@ -2,7 +2,7 @@
 
 ## Javascript Essentials Project
 
-<img src="./assets/images/Responsive-screen-shot.png" alt="Website on different screen sizes" style="height: 400px; width: 730px">
+<img src="./assets/images/responsive-screen-shot.png" alt="Website on different screen sizes" style="height: 400px; width: 730px">
 
 The website is designed to test the users knowledge of the times tables, while putting it into a 'code cracking' format. The idea behind the code cracking element is to make times tables slightly more fun for the user.
 
@@ -71,7 +71,7 @@ This gives the user the opportunity to enter their name, in order to log their s
 
 After each failed level the game will ask if the player is still playing, it does this by asking by referencing the users name (see example below);
 
-<img src="./assets/images/Is_alex_still_playing.png" alt="An alert asking if Alex is still playing" style="height: 250px; width: 650px">
+<img src="./assets/images/is_alex_still_playing.png" alt="An alert asking if Alex is still playing" style="height: 250px; width: 650px">
 
 ### Instructions
 
@@ -183,23 +183,23 @@ The Javascript was tested using JSHint.com and no errors were found.
 
 When testing I had an issue where the game was stuck on the 3 times table, despite being on level 5 (6 times table). I couldn't determine why this problem only happened after the first round and so ended up rewriting the runGame and levelUpdate functions.
 
-<img src="./assets/images/Stuck_on_threes.png" alt="console feedback showing repeated +3 pattern in the puzzle" style="height: 250px; width: 750px">
+<img src="./assets/images/stuck_on_threes.png" alt="console feedback showing repeated +3 pattern in the puzzle" style="height: 250px; width: 750px">
 
 There were a couple of bugs when the sorting of the scores was implemented into the table.
 
 Initially the sorting failed. After a check of the code I found the comparison argument was the wrong way around. The example I found on w3schools.com was designed to sort the table in ascending order - I didn't realise this and so the sorting was failing because as I tested the site I kept trying to beat the last score. Hence the better score went to the bottom of the table. This was rectified by using '<' instead of '>'. As below;
 
-<img src="./assets/images/Greater_than_sorting_issue.png" alt="snapshot of code shoing the use of less than in the comparison test" style="height: 130px; width: 550px">
+<img src="./assets/images/greater_than_sorting_issue.png" alt="snapshot of code shoing the use of less than in the comparison test" style="height: 130px; width: 550px">
 
 I also had a problem with the table not recording the top 5 scores, it would cut off after 3 scores. Code below;
 
-<img src="./assets/images/Delete_wrong_row.png" alt="snapshot of code showing a cut being made at the wrong row of the score table" style="height: 200px; width: 550px">
+<img src="./assets/images/delete_wrong_row.png" alt="snapshot of code showing a cut being made at the wrong row of the score table" style="height: 200px; width: 550px">
 
 This was a simple error to find and resolve as I had forgotten to include the table headers in the row count.
 
 There was another bug, that was found by mistake. This was the players name was blank if they clicked 'cancel' when prompted to enter their name, or if they opened the site link in a new tab.
 
-<img src="./assets/images/Missing_name.png" alt="snapshot of code showing a cut being made at the wrong row of the score table" style="height: 200px; width: 550px">
+<img src="./assets/images/missing_name.png" alt="snapshot of code showing a cut being made at the wrong row of the score table" style="height: 200px; width: 550px">
 
 This was solved by including a userName == null in the if statement as below;
 
@@ -209,7 +209,7 @@ This was solved by including a userName == null in the if statement as below;
 
 - Site has been evaluated by lighthouse and the score card is below.
 
-<img src="./assets/images/Lighthouse_scores.png" alt="lighthouse score card showing site evaluation" style="height: 190px; width: 475px">
+<img src="./assets/images/lighthouse_scores.png" alt="lighthouse score card showing site evaluation" style="height: 190px; width: 475px">
 
 [Return to the table of contents](#table-of-contents)
 
