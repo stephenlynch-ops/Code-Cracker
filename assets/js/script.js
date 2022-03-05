@@ -181,7 +181,7 @@ function resetGame() {
 
     var userName = prompt("Please enter you game name", "Mr.E Player");
 
-    if (userName == "") {
+    if (userName == "" || userName == null) {
         document.getElementById("player-name").innerText = "Mr.E Player";
     } else {
         document.getElementById("player-name").innerText = userName;
@@ -204,7 +204,7 @@ function resetGame() {
     let lastRow = document.getElementById("game-history").rows[rowCountAdj].cells;
     let lowestScore = (Number(lastRow[1].innerHTML));
 
-    if (levelCompleted >= lowestScore || document.getElementById("game").innerText == 1) {
+    if (levelCompleted >= lowestScore || document.getElementById("game").innerText == 1 || document.getElementById("game-history").rows.length < 5) {
         var table = document.getElementById("game-history");
         var row = table.insertRow(1);
         var cell1 = row.insertCell(0);
