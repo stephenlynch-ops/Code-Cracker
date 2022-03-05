@@ -19,7 +19,7 @@ The website is designed to test the users knowledge of the times tables, while p
 - [Technology](#Technology)
 - [Testing](#Testing)
     - [Functionality testing](#Functionality-testing)
-    - [Compatability testing](#Compatability-testing)
+    - [Compatibility testing](#Compatability-testing)
     - [Code Validation](#Code-validation)
     - [Issues found during testing](#Issues-found-during-testing)
     - [Performance testing](#Performance-testing)
@@ -37,11 +37,11 @@ The user is only required to enter the 3rd, 4th and 5th numbers in the sequence.
 
 ## User goals
 
-- Users are challanged by the ever increasing difficulty of the times tables as they increase
+- Users are challenged by the ever increasing difficulty of the times tables as they increase
 - Users are given a 'level reached' score when they fail a level
 - The 'level reached' score is logged in the game history section
 - The game history section acts as a target for future games
-- As each user is required to enter thier name it can be played by mulitiple players each trying to get further than the other players
+- As each user is required to enter their name it can be played by multiple players each trying to get further than the other players
 
 ## Structure of the website
 
@@ -49,7 +49,7 @@ The website has been designed to be responsive and easy to use / navigate across
 
 Users get feedback when they hover over the clickable links within the site.
 
-## Website pallette
+## Website palette
 
 The colors were picked for their contrast to each other, as well as giving a 'game table' feel to the user.
 
