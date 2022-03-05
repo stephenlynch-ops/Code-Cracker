@@ -204,14 +204,14 @@ function resetGame() {
     let lastRow = document.getElementById("game-history").rows[rowCountAdj].cells;
     let lowestScore = (Number(lastRow[1].innerHTML));
 
-    if (levelCompleted >= lowestScore || document.getElementById("game").innerText == 1 || document.getElementById("game-history").rows.length < 5) {
+    if (levelCompleted >= lowestScore || document.getElementById("game").innerText == 1 || rowCountAdj < 6) {
         var table = document.getElementById("game-history");
         var row = table.insertRow(1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         cell1.innerHTML = playerName;
         cell2.innerHTML = levelCompleted;
-    } else if (document.getElementById("game-history").rows.length = 5 && levelCompleted < lowestScore) {
+    } else if (rowCountAdj = 5 && levelCompleted < lowestScore) {
         alert(`Sorry thats not good enough to make the top 5 scores. You need to get to at least level ${lowestScore}.`);
     }
 
