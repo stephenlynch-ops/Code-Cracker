@@ -2,7 +2,7 @@
 
 ## Javascript Essentials Project
 
-<img src="./assets/images/Responsive-screen-shot.png" alt="Website on different screen sizes" style="height: 400px; width: 750px">
+<img src="./assets/images/Responsive-screen-shot.png" alt="Website on different screen sizes" style="height: 400px; width: 730px">
 
 The website is designed to test the users knowledge of the times tables, while putting it into a 'code cracking' format. The idea behind the code cracking element is to make times tables slightly more fun for the user.
 
@@ -124,7 +124,7 @@ After each failed level the game will ask if the player is still playing, it doe
 - Remove link to external site
 - Include an interactive time table page, similar to that shown on external site
 
-<img src="./assets/images/mathsisfun.com_table.png" alt="A table of results for the one to twelve times tables" style="height: 400px; width: 750px">
+<img src="./assets/images/mathsisfun.com_table.png" alt="A table of results for the one to twelve times tables" style="height: 400px; width: 730px">
 
 
 [Return to the table of contents](#table-of-contents)
@@ -251,7 +251,7 @@ I referred to w3schools.com and stackoverflow.com for help when i got stuck and 
 
 ## Home page
 
-<img src="./assets/images/deployed-site.png" alt="The finished site" style="height: 450px; width: 750px;"/>
+<img src="./assets/images/deployed-site.png" alt="The finished site" style="height: 450px; width: 700px;"/>
 
 ### Top 5 scores
 
