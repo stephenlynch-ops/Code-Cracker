@@ -194,24 +194,24 @@ function resetGame() {
  */
  function updateGameHistory() {
 
-    // Get player naem and score information
+    // Get player name and score information
     let playerName = document.getElementById("player-name").innerText;
     let levelCompleted = parseInt(document.getElementById("level").innerText);
 
-    // Evaluate existing game hostory records
+    // Evaluate existing game history records
     let rowCount = (document.getElementById("game-history").rows.length);
     let rowCountAdj = (rowCount -1);
     let lastRow = document.getElementById("game-history").rows[rowCountAdj].cells;
     let lowestScore = (Number(lastRow[1].innerHTML));
 
-    if (levelCompleted >= lowestScore || document.getElementById("game").innerText == 1 || rowCountAdj < 6) {
+    if (levelCompleted >= lowestScore || document.getElementById("game").innerText == 1 || rowCount < 6) {
         var table = document.getElementById("game-history");
         var row = table.insertRow(1);
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1);
         cell1.innerHTML = playerName;
         cell2.innerHTML = levelCompleted;
-    } else if (rowCountAdj = 5 && levelCompleted < lowestScore) {
+    } else if (rowCount >= 5 && levelCompleted < lowestScore) {
         alert(`Sorry thats not good enough to make the top 5 scores. You need to get to at least level ${lowestScore}.`);
     }
 
